@@ -1,0 +1,14 @@
+<!doctype html>
+<!-- Minimo's live wallpaper: Abyssal Garden (vendor/abyssal-garden, MIT, unchanged) in a frame,
+     dived into on its own, muted (Chrome runs with --mute-audio), touring its six views.
+     Options in the hash: #detail=2&dwell=40&glide=2500   detail: 2 Low, 1 Medium, 0 High.
+     Needs Chrome's --allow-file-access-from-files: the frame is file:// too, and is driven from here. -->
+<html><head><meta charset=utf-8><title>minimo-abyssal</title>
+<style>
+html,body{margin:0;height:100%;overflow:hidden;background:#03131c;cursor:none}
+iframe{position:fixed;inset:0;width:100%;height:100%;border:0;pointer-events:none}
+#veil{position:fixed;inset:0;background:#03131c;opacity:1;transition:opacity 1.2s ease;pointer-events:none}
+</style></head><body>
+<iframe id=f></iframe><div id=veil></div>
+<script src="wallpaper.js"></script>
+</body></html>

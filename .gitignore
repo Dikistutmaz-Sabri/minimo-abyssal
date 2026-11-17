@@ -1,0 +1,11 @@
+*.so
+build/
+backup/
+tmp/
+test/*.log
+test/shots/*eski*
+vendor/*
+!vendor/abyssal-garden/
+vendor/abyssal-garden/*
+!vendor/abyssal-garden/index.html
+!vendor/abyssal-garden/LICENSE

@@ -1,0 +1,15 @@
+# Minimo OS's live wallpaper (Abyssal Garden in Chrome; the minimo-abyssal plugin puts it behind
+# everything). In Minimo's session only. If it stops or crashes, the static wallpaper shows.
+[Unit]
+Description=Minimo OS live wallpaper (Abyssal Garden)
+PartOf=minimo-session.target
+After=minimo-session.target minimo-shell.service
+
+[Service]
+ExecStartPre=/bin/sleep 2
+ExecStart=%h/.local/share/minimo-abyssal/run.sh
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=minimo-session.target
